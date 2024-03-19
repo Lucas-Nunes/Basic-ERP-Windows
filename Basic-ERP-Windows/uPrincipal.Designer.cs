@@ -39,6 +39,7 @@
             MaximizeBox = false;
             Name = "uPrincipal";
             Text = "Basic ERP Windows";
+            Load += uPrincipal_Load;
             ResumeLayout(false);
         }
 

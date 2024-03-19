@@ -6,5 +6,16 @@ namespace Basic_ERP_Windows
         {
             InitializeComponent();
         }
+
+        private void uPrincipal_Load(object sender, EventArgs e)
+        {
+            uLogin FrLogin = new uLogin();
+            FrLogin.ShowDialog();
+            if (string.IsNullOrWhiteSpace(uFuncoes.NomeUsuario))
+            {
+                this.Close();
+            }
+            
+        }
     }
 }
