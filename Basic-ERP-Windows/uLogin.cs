@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using IniParser.Model;
+using IniParser;
+using System.IO;
 
 namespace Basic_ERP_Windows
 {
@@ -20,7 +23,9 @@ namespace Basic_ERP_Windows
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            string sConexao = "Data Source=LUCASNTPC\\SQLSERVER2022;Initial Catalog=Basic-ERP-Windows;User ID=sa;Password=lucas@2024";
+            FileIniDataParser parser = new FileIniDataParser();
+            IniData DadosINI = parser.ReadFile(uFuncoes.CaminhoConfigINI);
+            string sConexao = "Data Source="+ DadosINI["[SISTEMA]"]["Instancia"]+ ";Initial Catalog="+ DadosINI["[SISTEMA]"]["Dados"]+";User ID="+ DadosINI["[SISTEMA]"]["Usuario"]+ ";Password="+DadosINI["[SISTEMA]"]["Senha"];
 
             using (SqlConnection conexaoBD = new SqlConnection(sConexao))
             {

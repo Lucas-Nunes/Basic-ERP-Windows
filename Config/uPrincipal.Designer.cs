@@ -41,83 +41,90 @@
             // 
             // Usuario
             // 
-            Usuario.Location = new Point(23, 168);
+            Usuario.Location = new Point(20, 126);
+            Usuario.Margin = new Padding(3, 2, 3, 2);
             Usuario.Name = "Usuario";
-            Usuario.Size = new Size(242, 27);
+            Usuario.Size = new Size(212, 23);
             Usuario.TabIndex = 0;
             // 
             // instancia
             // 
+            instancia.DropDownStyle = ComboBoxStyle.DropDownList;
             instancia.FormattingEnabled = true;
-            instancia.Location = new Point(23, 38);
+            instancia.Location = new Point(20, 28);
+            instancia.Margin = new Padding(3, 2, 3, 2);
             instancia.Name = "instancia";
-            instancia.Size = new Size(242, 28);
+            instancia.Size = new Size(212, 23);
             instancia.TabIndex = 1;
             // 
             // Senha
             // 
-            Senha.Location = new Point(23, 230);
+            Senha.Location = new Point(20, 172);
+            Senha.Margin = new Padding(3, 2, 3, 2);
             Senha.Name = "Senha";
-            Senha.Size = new Size(242, 27);
+            Senha.Size = new Size(212, 23);
             Senha.TabIndex = 2;
             // 
             // BancoDeDados
             // 
-            BancoDeDados.Location = new Point(23, 104);
+            BancoDeDados.Location = new Point(20, 78);
+            BancoDeDados.Margin = new Padding(3, 2, 3, 2);
             BancoDeDados.Name = "BancoDeDados";
-            BancoDeDados.Size = new Size(242, 27);
+            BancoDeDados.Size = new Size(212, 23);
             BancoDeDados.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(30, 14);
+            label1.Location = new Point(26, 10);
             label1.Name = "label1";
-            label1.Size = new Size(67, 20);
+            label1.Size = new Size(54, 15);
             label1.TabIndex = 4;
             label1.Text = "Instância";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 81);
+            label2.Location = new Point(20, 61);
             label2.Name = "label2";
-            label2.Size = new Size(118, 20);
+            label2.Size = new Size(92, 15);
             label2.TabIndex = 5;
             label2.Text = "Banco de Dados";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(23, 145);
+            label3.Location = new Point(20, 109);
             label3.Name = "label3";
-            label3.Size = new Size(59, 20);
+            label3.Size = new Size(47, 15);
             label3.TabIndex = 6;
             label3.Text = "Usuário";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(23, 207);
+            label4.Location = new Point(20, 155);
             label4.Name = "label4";
-            label4.Size = new Size(49, 20);
+            label4.Size = new Size(39, 15);
             label4.TabIndex = 7;
             label4.Text = "Senha";
             // 
             // BntSalvar
             // 
-            BntSalvar.Location = new Point(79, 290);
+            BntSalvar.Location = new Point(69, 218);
+            BntSalvar.Margin = new Padding(3, 2, 3, 2);
             BntSalvar.Name = "BntSalvar";
-            BntSalvar.Size = new Size(108, 51);
+            BntSalvar.Size = new Size(94, 38);
             BntSalvar.TabIndex = 8;
             BntSalvar.Text = "Salvar";
             BntSalvar.UseVisualStyleBackColor = true;
+            BntSalvar.Click += BntSalvar_Click;
             // 
             // uPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(282, 363);
+            ClientSize = new Size(247, 272);
             Controls.Add(BntSalvar);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -128,10 +135,12 @@
             Controls.Add(instancia);
             Controls.Add(Usuario);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "uPrincipal";
             Text = "Configurações";
+            Load += uPrincipal_Load;
             ResumeLayout(false);
             PerformLayout();
         }
