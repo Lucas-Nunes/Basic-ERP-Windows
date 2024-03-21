@@ -20,7 +20,7 @@ namespace Basic_ERP_Windows
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            string sConexao = "Data Source=LUCASPC\\SQLEXPRESS2019;Initial Catalog=Basic-ERP-Windows;User ID=sa;Password=lucas@2023";
+            string sConexao = "Data Source=LUCASNTPC\\SQLSERVER2022;Initial Catalog=Basic-ERP-Windows;User ID=sa;Password=lucas@2024";
 
             using (SqlConnection conexaoBD = new SqlConnection(sConexao))
             {
